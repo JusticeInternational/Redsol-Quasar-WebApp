@@ -13,6 +13,7 @@
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
     "quasar": "^2.0.0",
+    "quasar-cli": "^0.17.26",
     "vuex": "^4.0.1"
   },
   "devDependencies": {
