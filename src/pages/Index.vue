@@ -1,11 +1,16 @@
 <template>
-    <q-layout container style="height: 100vh" class="shadow-2">
-        <q-header elevated>
+    <q-layout container style="height: 100vh" class="shadow-3">
+        <q-header elevated class="bg-white">
             <q-toolbar class="text-primary">
+                <q-avatar>
+                    <img src="~assets/imgs/vectorSun.png" alt="logo">
+                </q-avatar>
                 <q-toolbar-title class="text-color">
                     RedSol
                 </q-toolbar-title>
-            </q-toolbar>
+                <q-space ></q-space>
+                <q-btn color="black"><router-link style="none" :to="{name:'login'}">Login</router-link></q-btn>
+            </q-toolbar> 
         </q-header>
 
         <q-page-container>
@@ -30,6 +35,6 @@ export default defineComponent({
 
 <style scoped>
     .text-color{
-        color: white;
+        color: black;
     }
 </style>
