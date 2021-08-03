@@ -1,15 +1,20 @@
 <template>
     <q-layout container style="height: 100vh" class="shadow-3">
-        <q-header elevated class="bg-white">
-            <q-toolbar class="text-primary">
-                <q-avatar>
-                    <img src="~assets/imgs/vectorSun.png" alt="logo">
-                </q-avatar>
-                <q-toolbar-title class="text-color">
-                    RedSol
-                </q-toolbar-title>
-                <q-space ></q-space>
-                <q-btn color="black"><router-link style="none" :to="{name:'login'}">Login</router-link></q-btn>
+        <q-header elevated class="bg-white q-pa-xs">
+            <q-toolbar class="text-primary ">
+                <div style="width: 100vw" class="row justify-around">
+                    
+                    <!-- logo with avatar -->
+                    <q-toolbar-title class="text-color " style="max-width: 150px;">
+                        <q-avatar>
+                            <img src="~assets/imgs/vectorSun.png" alt="logo">
+                        </q-avatar>
+                        RedSol
+                    </q-toolbar-title>
+                    <q-space style="max-width: 60px"></q-space>
+                    <q-btn color="black"><router-link :to="{name:'login'}">Login</router-link></q-btn>    
+                </div>
+                
             </q-toolbar> 
         </q-header>
 
