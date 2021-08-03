@@ -1,11 +1,18 @@
 <template>
-  <h2>Helooo</h2>
+  <intro-cards/> 
 </template>
 
 <script>
+/*eslint-disable*/
 import { defineComponent } from 'vue';
 
+import introCards from 'src/components/CardsIntro.vue'
+
+
 export default defineComponent({
-  name: 'PageIndex'
+    name: 'PageIndex',
+    components:{
+        introCards,
+    }
 })
 </script>
