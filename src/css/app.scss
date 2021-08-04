@@ -7,3 +7,9 @@
 *{
     font-family: 'poppins-regular';
 }
+
+// remove colors and style from router-link
+a, a:link, a:visited, a:active, a:hover {
+    color: white;
+    text-decoration: none;
+}
