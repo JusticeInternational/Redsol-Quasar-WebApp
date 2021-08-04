@@ -1,62 +1,51 @@
 <template>
-  
-        <!-- <h2>Write here: </h2> -->
-        <!-- here is where your 3 cards(carosel will be) -->
-  <div>
-    <div class="q-pa-md">
+    <div>
+        <div class="height-full q-pa-sm text-center row justify-center">
+            <q-carousel
+                v-model="slide"
+                swipeable
+                animated
+                :arrows="arrows"
+                :navigation="navigation"
+                :navigation-position="navPos"
+                style="min-height: 630px; max-width: 675px"
+                class="bg-blue text-black rounded-borders"
+                >
 
-    <div class="row items-center q-mb-md">
-    
-    </div> 
+                <!-- Card 1 -->
+                <q-carousel-slide style="color: white" name="style" class="column wrap flex-center">
+                    <h6 class="q-ma-sm">
+                        Encuentra los recursos de apoyo disponibles en tu comunidad
+                    </h6>
+                    <q-img height="40%" fit="contain" src="~/assets/imgs/vectorSun.png"/>
+                    <p class="q-mt-sm">La aplicación Red Sol  te permite hacer búsquedas geolocalizadas. Podrás seleccionar los recursos de acuerdo a las categorías de los proveedores de servicios comunitarios: Agua y Comida, Refugio, salud, educacion, trabajo, legal, etc.</p>
+                    <h6 class="q-ma-sm">Bienvenido, registrate ya!</h6>
+                </q-carousel-slide>
 
-    <q-carousel
-      v-model="slide"
-      swipeable
-      animated
-      :padding="padding"
-      :arrows="arrows"
-      :navigation="navigation"
-      :navigation-position="navPos"
-      height="300px"
-      class="bg-blue text-black rounded-borders"
-    >
-      <q-carousel-slide name="style" class="column no-wrap flex-center">
-        <!-- <q-icon name="style" size="56px" /> -->
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="tv" class="column no-wrap flex-center">
-        <!-- <q-icon name="live_tv" size="56px" /> --> 
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="layers" class="column no-wrap flex-center">
-        <!-- <q-icon name="layers" size="56px" /> -->
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="map" class="column no-wrap flex-center">
-        <!-- <q-icon name="terrain" size="56px" /> -->
-        <div class="q-mt-md text-center">
-          {{ lorem }}
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
-  </div>
+                <!-- card 2  -->
+                <q-carousel-slide style="color: white" name="tv" class="row wrap flex-center">
+                    <q-img height="70%" fit="contain"  src="~/assets/imgs/map.png"/>
+                    <h6 class="q-ma-sm rounded-borders">
+                        Busca los recursos de apoyo
+                        mas cercanos a ti o en una 
+                        ciudad en particular.
+                    </h6>
+                </q-carousel-slide>
 
+                <!-- card 3  -->
+                <q-carousel-slide style="color: white" name="layers" class="column wrap flex-center">
+                    <h5 class="q-ma-sm">Somos Voluntarios</h5>
+                    <q-img class="q-ma-sm rounded-borders" height="60%" fit="contain" src="~/assets/imgs/volunteer.png"/>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius justo at dui dictum tristique. Sed eget ante porta, congue lectus ac, placerat sapien. Proin laoreet sagittis nisl eget pulvinar.
+                    </p>
+                </q-carousel-slide>
+            </q-carousel>
+        </div>
     </div>
 </template>
 
 <script>
-// export default {
-    // setup(){
-//         // Sandra, here is where the JS code goes for developing the swiping of the cards
-//     }
-// }
-
 import { ref, watch } from 'vue'
 
 export default {

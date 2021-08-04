@@ -1,5 +1,6 @@
 <template>
     <q-layout container style="height: 100vh" class="shadow-3">
+        <!-- header  -->
         <q-header elevated class="bg-white q-pa-xs">
             <q-toolbar class="text-primary ">
                 <div style="width: 100vw" class="row justify-around">
@@ -18,29 +19,23 @@
             </q-toolbar> 
         </q-header>
 
+        <!-- body/ main -->
         <q-page-container>
             <Intro-cards/> 
         </q-page-container>
     </q-layout>
-  <q-avatar>
-    <img src="~assets/logo.jpg" alt="logo">
-  </q-avatar>
-  <nav-bar/> 
-  <intro-cards/> 
-
 </template>
 
 <script>
 import { defineComponent } from 'vue';
 
-import introCards from 'src/components/CardsIntro.vue'
-import navBar from 'src/components/NavigationBar.vue'
+import IntroCards from 'src/components/CardsIntro.vue'
 
 export default defineComponent({
     name: 'PageIndex',
+
     components:{
-        introCards,
-        navBar
+        IntroCards
     }
 })
 </script>
