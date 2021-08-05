@@ -28,9 +28,11 @@ const routes = [
                 name:'usuario',
                 component: ()=>import('pages/UserSignUp.vue')
             },
-            // {
-            //     path:'/organization'
-            // },
+            {
+                path:'organization',
+                name: 'organization',
+                component: ()=>import('pages/OrganizationSignUp.vue')
+            },
         ]
 
     },

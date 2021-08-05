@@ -1,5 +1,5 @@
 <template>
-    <q-page>
+    <q-page style-fn="height:1000px">
         <div id="pg-cont" class="row justify-center items-center">
             <div class="column justify-center items-center">
                 <div class="row">
@@ -76,8 +76,4 @@ export default {
 </script>
 
 <style scoped>
-#pg-cont{
-    height: 100%;
-}
-
 </style>

@@ -1,16 +1,24 @@
 <template>
     <q-layout view="hHh lpR fFf">
-        <q-page-container>
-            <q-pqge v-if="!selected">
-                <h3>Where do you want to sign up???</h3>
+        <q-page-container style="height: 100vh" class=" q-py-lg">
+            <q-header  reveal>
+                <div class="row justify-evenly q-my-md">
 
-                <router-link :to="{name: 'usuario'}">
+                    <h4 style="color:black" class="q-my-sm text-center">Where do you want to sign up???</h4>
+
                     <q-btn color="black" @click="whenSelected" >
-                        user
+                        <router-link :to="{name: 'usuario'}">
+                            usuario
+                        </router-link>
                     </q-btn>
-                </router-link>
-                
-            </q-pqge>
+                    
+                    <q-btn color="black" @click="whenSelected" >
+                        <router-link :to="{name: 'organization'}">
+                            organization
+                        </router-link>
+                    </q-btn>
+                </div>
+            </q-header >
 
             <router-view/>
         </q-page-container>
