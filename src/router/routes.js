@@ -18,12 +18,6 @@ const routes = [
         ]
     },
     {
-        path:'/usersignup',
-        name:'usersignup',
-        component: ()=> import('pages/UserSignUp.vue')
-    },
-
-    {
         path:'/signup',
         name:'signup',
         component: ()=>import('layouts/Registration.vue'),

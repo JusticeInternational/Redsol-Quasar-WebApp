@@ -2,8 +2,12 @@
     <q-page>
         <div class="column justify-center items-center">
             <div class="row">
-                <q-card square bordered class="q-pa-lg shadow-1">
-                    <q-card-section class="column text-center">
+                <q-card
+                    square
+                    bordered
+                    class="q-pa-xs shadow-1">
+                    <q-card-section
+                        class="column text-center">
                         <h4 class="q-ma-sm">
                             Bienvenido
                         </h4>
@@ -12,7 +16,8 @@
                         </p>
                     </q-card-section>
                     <q-card-section class="row">
-                        <q-form class="q-gutter-md full-width">
+                        <q-form
+                            class="q-gutter-md full-width">
                             <!-- FIRST NAME  -->
                             <q-input
                                 square
@@ -58,8 +63,14 @@
                         </q-form>
                     </q-card-section>
                     <q-card-section class="column">
-                        <q-checkbox color="blue" v-model="terms" label="He leido y acepto los Terminos y condiciones" />
-                        <q-checkbox color="blue" v-model="policy" label="Entiendo y aceptop las Politicas de privacidad" />
+                        <q-checkbox
+                            color="blue"
+                            v-model="terms"
+                            label="He leido y acepto los Terminos y condiciones" />
+                        <q-checkbox
+                            color="blue"
+                            v-model="policy"
+                            label="Entiendo y aceptop las Politicas de privacidad" />
                     </q-card-section>
 
                     <q-card-section class="column">

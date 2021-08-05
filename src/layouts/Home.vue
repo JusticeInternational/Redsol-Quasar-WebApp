@@ -1,7 +1,7 @@
 <template>
     <q-layout view="hHh lpR fFf">
         <!-- header  -->
-        <q-header elevated class="bg-white q-pa-xs">
+        <q-header class="bg-white q-pa-xs">
             <q-toolbar class="text-primary ">
                 <div style="width: 100vw" class="row justify-around">
                     <!-- logo with avatar -->
