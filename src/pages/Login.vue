@@ -22,7 +22,8 @@
 
                             <q-card-section class="text-center q-pa-none">
                                 <!-- add link to registration page "router-link"-->
-                                <p class="text-blue-6">Registrarme</p>
+                                
+                                <router-link :to="{name: 'signup'}"><p class="text-blue-6">Registrarme</p></router-link>
                             </q-card-section>
                             <q-card-section class="text-center q-pa-none">
                                 <!-- add link to registration page "router-link"-->
