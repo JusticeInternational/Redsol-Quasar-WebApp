@@ -1,0 +1,61 @@
+<template>
+    <q-layout view="hHh lpR fFf">
+        <!-- header  -->
+        <q-header elevated class="bg-white q-pa-xs">
+            <q-toolbar class="text-primary ">
+                <div style="width: 100vw" class="row justify-around">
+                    <!-- logo with avatar -->
+                    <q-toolbar-title class="text-black " style="max-width: 150px;">
+                        <q-avatar>
+                            <img src="~assets/imgs/vectorSun.png" alt="logo">
+                        </q-avatar>
+                        RedSol
+                    </q-toolbar-title>
+                    <q-space style="max-width: 60px"></q-space>
+                    <q-btn @click="changButton" color="black" :to="{name:button.route}">{{button.name}}</q-btn>    
+                </div>
+            </q-toolbar> 
+        </q-header>
+
+        <q-page-container>
+            <router-view />
+        </q-page-container>
+
+    </q-layout>
+</template>
+
+<script>
+import {ref} from 'vue'
+
+export default {
+    setup() {
+        const button = ref({
+            route: 'login',
+            name: 'Login'
+        })
+
+        function changButton(){
+            if(button.value.route == 'login'){
+                button.value = {
+                    route: 'home',
+                    name: 'Home'
+                }
+            }
+            else{
+                button.value = {
+                    route: 'login',
+                    name: 'Login'
+                }
+            }
+        }
+
+
+
+        return{
+            button,
+            changButton,
+        }
+
+    },
+}
+</script>
