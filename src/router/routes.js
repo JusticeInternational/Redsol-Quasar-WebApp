@@ -20,13 +20,9 @@ const routes = [
     {
         path:'/signup',
         name:'signup',
+        redirect: {name: 'regstr'}, //selects on of the children as defoult
         component: ()=>import('src/layouts/SignUp.vue'),
         children:[
-            {
-                // This catches all path in case something goes wrong
-                path:'',
-                component:()=>import('pages/UserSignUp.vue')
-            },
             {
                 path:'usuario',
                 name:'usuario',
@@ -37,12 +33,14 @@ const routes = [
                 name: 'organization',
                 component: ()=>import('pages/OrganizationSignUp.vue')
             },
+            {
+                path:'',
+                name: 'regstr',
+                component: ()=>import('pages/SignUpSelector.vue')
+            }
         ]
 
     },
-
-
-
 
     // Always leave this as last one,
     // but you can also remove it
