@@ -20,7 +20,7 @@ const routes = [
     {
         path:'/signup',
         name:'signup',
-        component: ()=>import('layouts/Registration.vue'),
+        component: ()=>import('src/layouts/SignUp.vue'),
         children:[
             {
                 path:'usuario',

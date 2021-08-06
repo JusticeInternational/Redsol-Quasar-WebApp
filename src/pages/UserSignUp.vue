@@ -1,6 +1,6 @@
 <template>
     <q-page>
-        <div class="column justify-center items-center">
+        <div class="q-pa-md column justify-center items-center">
             <div class="row">
                 <q-card
                     square
