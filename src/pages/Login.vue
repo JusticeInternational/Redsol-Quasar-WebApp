@@ -10,12 +10,26 @@
                         <img src="~/assets/imgs/loginLogo.png" alt="Logo" >
                     </q-card-section>
                     <!-- email & password  -->
-                    <q-card-section>
-                        <q-form class="q-gutter-md">
+                    <q-card-section class="q-pa-md">
+                        <q-form class="q-gutter-md q-pa-none">
                             <!-- email  -->
-                            <q-input square filled v-model="email" type="email" label="email" :rules="[val => emailValidation(val) || 'Not valid email']" lazy-rules/>
+                            <q-input
+                                square
+                                filled
+                                v-model="email"
+                                type="email"
+                                label="email"
+                                :rules="[val => emailValidation(val) || 'Not valid email']"
+                                lazy-rules />
 
-                            <q-input v-model="password" square filled :type="isPwd ? 'password' : 'text'" label="Password">
+                            <q-input
+                                :rules="[val => val.length > 5 || 'Password too short']"
+                                lazy-rules
+                                v-model="password"
+                                square
+                                filled
+                                :type="isPwd ? 'password' : 'text'"
+                                label="Password">
                                 <template v-slot:append>
                                     <q-icon
                                         :name="isPwd ? 'visibility_off' : 'visibility'"
@@ -27,7 +41,7 @@
                         </q-form>
                     </q-card-section>
                     <!-- login button  -->
-                    <q-card-actions class="q-px-md">
+                    <q-card-actions class="q-pb-sm q-px-md q-pt-none">
                         <q-btn unelevated color="black" class="full-width" label="Login" />
                     </q-card-actions>
 
@@ -45,15 +59,15 @@
 
                     <q-separator class="q-my-xs q-mx-lg"/>
 
-                    <!-- sign up with googe or facebook  -->
-                    <q-card-section class="row justify-evenly">
+                    <!-- sign up with google or facebook  -->
+                    <q-card-section class="row justify-evenly q-pa-sm">
                         <q-button>
-                            <q-avatar>
+                            <q-avatar size="lg">
                                 <img src="~/assets/imgs/google-logo.png" alt="Google" >
                             </q-avatar>
                         </q-button>
                         <q-button>
-                            <q-avatar>
+                            <q-avatar size="lg">
                                 <img src="~/assets/imgs/Facebook-logo.png" alt="Facebook" >
                             </q-avatar>
                         </q-button>
