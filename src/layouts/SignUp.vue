@@ -11,9 +11,13 @@
                 </q-toolbar-title>
             </q-toolbar>
 
-            <q-tabs v-if="!leftDrawerOpen" align="center">
-                <q-route-tab class="text-black" :to="{name:'usuario'}" label="Usuario" />
-                <q-route-tab class="text-black" :to="{name:'organization'}" label="Osuario" />
+            <q-tabs
+                v-if="!leftDrawerOpen"
+                align="center"
+                active-color="blue-5">
+                <q-route-tab icon="person" class="text-black" :to="{name:'usuario'}" label="Usuario" />
+                
+                <q-route-tab icon="corporate_fare" class="text-black" :to="{name:'organization'}" label="Osuario" />
             </q-tabs>
         </q-header>
 

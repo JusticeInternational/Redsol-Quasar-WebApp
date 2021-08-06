@@ -23,6 +23,11 @@ const routes = [
         component: ()=>import('src/layouts/SignUp.vue'),
         children:[
             {
+                // This catches all path in case something goes wrong
+                path:'',
+                component:()=>import('pages/UserSignUp.vue')
+            },
+            {
                 path:'usuario',
                 name:'usuario',
                 component: ()=>import('pages/UserSignUp.vue')
