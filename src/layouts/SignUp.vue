@@ -1,13 +1,13 @@
 <template>
-    <q-layout view="hHh lpR fFf">
+    <q-layout view="hHh LpR fFf">
 
         <q-header bordered class="bg-primary text-black" height-hint="98">
             <q-toolbar>
-                <q-toolbar-title>
-                <q-avatar>
+                <q-toolbar-title class="text-weight-bold">
+                <q-avatar class="q-mx-sm">
                     <img src="~assets/imgs/vectorSun.png" alt="logo">
                 </q-avatar>
-                    RedSol
+                    Red Sol
                 </q-toolbar-title>
             </q-toolbar>
 
@@ -21,7 +21,13 @@
             </q-tabs>
         </q-header>
 
-        <q-drawer width="200" v-model="leftDrawerOpen" side="left" behavior="desktop" bordered>
+        <q-drawer
+            :width="250"
+            v-model="leftDrawerOpen"
+            side="left"
+            behavior="desktop"
+            bordered
+            no-swipe-close>
         <!-- drawer content -->
             <q-list
                 separator>

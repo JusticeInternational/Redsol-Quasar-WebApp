@@ -49,7 +49,7 @@
 
                     <!-- signup instead  -->
                     <q-card-section class="text-center q-pa-none">
-                        <q-btn :to="{name: 'signup'}" flat color="black" label="Registrarme" :outline="false"/>
+                        <q-btn :to="{name: 'regstr'}" flat color="black" label="Registrarme" :outline="false"/>
                     </q-card-section>
 
                     <!-- change passwod  -->
@@ -61,16 +61,16 @@
 
                     <!-- sign up with google or facebook  -->
                     <q-card-section class="row justify-evenly q-pa-sm">
-                        <q-button>
+                        <q-btn dense round>
                             <q-avatar size="lg">
                                 <img src="~/assets/imgs/google-logo.png" alt="Google" >
                             </q-avatar>
-                        </q-button>
-                        <q-button>
+                        </q-btn>
+                        <q-btn dense round>
                             <q-avatar size="lg">
                                 <img src="~/assets/imgs/Facebook-logo.png" alt="Facebook" >
                             </q-avatar>
-                        </q-button>
+                        </q-btn>
                     </q-card-section>
                 </q-card>
             </div>

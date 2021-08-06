@@ -41,6 +41,12 @@ const routes = [
         ]
 
     },
+    {
+        path:'/usuario',
+        name: 'profileU',
+        component: ()=>import('layouts/Usuario.vue')
+
+    },
 
     // Always leave this as last one,
     // but you can also remove it

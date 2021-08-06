@@ -1,17 +1,22 @@
 <template>
     <q-layout view="hHh lpR fFf">
         <!-- header  -->
-        <q-header class="bg-white q-pa-xs">
+        <q-header bordered class="bg-white q-pa-xs">
             <q-toolbar class="text-center row justify-around">
-                    <!-- logo with avatar -->
-                    <q-toolbar-title class="text-black " style="max-width: 150px;">
-                        <q-avatar>
-                            <img src="~assets/imgs/vectorSun.png" alt="logo">
-                        </q-avatar>
-                        RedSol
-                    </q-toolbar-title>
-                    <q-space style="max-width: 60px"></q-space>
-                    <q-btn @click="changButton" color="black" :to="{name:button.route}">{{button.name}}</q-btn>    
+                <!-- logo with avatar -->
+                <q-toolbar-title class="text-black text-weight-bold" style="max-width: 150px;">
+                    <q-avatar>
+                        <img src="~assets/imgs/vectorSun.png" alt="logo">
+                    </q-avatar>
+                    Red Sol
+                </q-toolbar-title>
+                <q-space style="max-width: 60px"></q-space>
+                <q-btn
+                    @click="changButton"
+                    color="black"
+                    :to="{name:button.route}">
+                    {{button.name}}
+                </q-btn> 
             </q-toolbar> 
         </q-header>
 
@@ -46,9 +51,6 @@ export default {
                 }
             }
         }
-
-
-
         return{
             button,
             changButton,

@@ -6,7 +6,7 @@
             N.B. this section will disapear if the device is smaller then xs
          -->
         <q-card
-            v-if="$q.screen.gt.xs"
+            v-if="isDesktop"
             class="q-ma-md row wrap items-center q-pa-xs shadow-1">
 
             <q-card-section 
@@ -35,7 +35,7 @@
             N.B. This section will appear only if on phone
          -->
         <q-card
-            v-if="$q.screen.lt.sm"
+            v-else
             class="q-ma-md column items-center q-pa-xs shadow-1">
 
             <q-card-section>
@@ -74,8 +74,10 @@
                 </h3>
             </q-card-section>
 
+            <!-- make it disapear when small VVV -->
             <q-card-section
-                class="gt-xs col-4 q-ma-none q-mb-xs q-pa-none text-right">
+                v-if="mapImg"
+                class="col-4 q-ma-none q-mb-xs q-pa-none text-right">
                 <q-img style="max-width: 300px" alt="Map" fit="fill" src="~/assets/imgs/map.png"/>
             </q-card-section>
         </q-card>
@@ -86,12 +88,14 @@
             HORIZONTAL SECTION
          -->
         <q-card
-            class="gt-xs q-ma-md row wrap items-center shadow-1">
+            v-if="isDesktop"
+            class="q-ma-md row wrap items-center shadow-1">
             <q-card-section class="col">
                 <h4 class="q-ma-sm text-left">Somos Voluntarios</h4>
             </q-card-section>
 
             <q-card-section
+                v-if="mapImg"
                 class="col q-pa-none">
                 <q-img class="rounded-borders" fit="contain" src="~/assets/imgs/volunteer.png"/>
             </q-card-section>
@@ -107,7 +111,8 @@
             VERTICAL SECTION
          -->
         <q-card
-            class="lt-sm q-ma-md col wrap items-center text-center shadow-1">
+            v-else
+            class="q-ma-md col wrap items-center text-center shadow-1">
             <q-card-section class="row">
                 <h4 class="q-ma-xs">Somos Voluntarios</h4>
             </q-card-section>
@@ -127,17 +132,37 @@
 </template>
 
 <script>
-import { useQuasar } from 'quasar'
+import {ref} from 'vue'
 
 export default {
-    
-    components:{
-    },
 
     setup(){
-        const $q = useQuasar();
+        const isDesktop = ref(false)
+        const mapImg = ref(true)
+
+        function setImg(){
+            if(window.innerWidth >= 762){
+                mapImg.value = true
+            }
+            else mapImg.value = false
+        }
+        function setWindow(){
+            if(window.innerWidth >= 600){
+                isDesktop.value = true
+            }
+            else isDesktop.value = false
+        }
+
+        setWindow()
+        setImg()
 
 
+        return{
+            isDesktop,
+            setWindow,
+            setImg,
+            mapImg,
+        }
     }
 }
 </script>
