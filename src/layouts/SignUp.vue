@@ -71,22 +71,23 @@
 // import { ref, onUpdated } from 'vue'
 
 export default {
-  setup () {
-    // const leftDrawerOpen = ref(true)
+    setup(){}
+    // setup () {
+    //     const leftDrawerOpen = ref(true)
 
-    // onUpdated(()=>setLayout)
+    //     onUpdated(()=>setLayout)
 
-    // function setLayout(){
-    //     if(window.innerWidth >= 600)
-    //         leftDrawerOpen.value = true
-    //     else leftDrawerOpen.value = false
+    //     function setLayout(){
+    //         if(window.innerWidth >= 600)
+    //             leftDrawerOpen.value = true
+    //         else leftDrawerOpen.value = false
+    //     }
+    //     setLayout()
+
+    //     return {
+    //       leftDrawerOpen,
+    //       setLayout,
+    //     }
     // }
-    // setLayout()
-
-    return {
-    //   leftDrawerOpen,
-    //   setLayout,
-    }
-  }
 }
 </script>

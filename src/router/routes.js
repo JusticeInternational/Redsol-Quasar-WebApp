@@ -26,17 +26,20 @@ const routes = [
             {
                 path:'usuario',
                 name:'usuario',
-                component: ()=>import('pages/UserSignUp.vue')
+                component: ()=>import('pages/UserSignUp.vue'),
+                meta: { transition: 'slide-right' },
             },
             {
                 path:'organization',
                 name: 'organization',
-                component: ()=>import('pages/OrganizationSignUp.vue')
+                component: ()=>import('pages/OrganizationSignUp.vue'),
+                meta: { transition: 'slide-left' },
             },
             {
                 path:'',
                 name: 'regstr',
-                component: ()=>import('pages/SignUpSelector.vue')
+                component: ()=>import('pages/SignUpSelector.vue'),
+                meta: { transition: 'fade' },
             }
         ]
 
