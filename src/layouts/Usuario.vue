@@ -22,6 +22,7 @@
             </q-toolbar>
 
             <q-tabs align="left">
+                <!-- REMEMBER TO AD TO PROPERTY TO THE TABS OR WARNING WILL START TO COME UP -->
                 <q-route-tab label="Search" />
                 <q-route-tab label="Map" />
                 <q-route-tab label="List" />
